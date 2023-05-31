@@ -25,8 +25,8 @@ const SignUp = () => {
   };
   return (
     <section>
+      <div className="register-cont">
       <div className="signup-img">
-        <img src="image.png" alt="" />
       </div>
       <div className="sign-in-cont">
 
@@ -93,6 +93,7 @@ const SignUp = () => {
         Already have an account?
         <NavLink className='create-ac' to="/signin">Sign in</NavLink>
         </div>
+      </div>
       </div>
     </section>
   );

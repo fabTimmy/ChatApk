@@ -42,7 +42,9 @@ const About = () => {
             <div className="aside">
               <div className="aside-cards">
                 <div className="card-1">
-                  <img src="../Image/carbon_analytics.png" alt="" />
+                <div className="img">
+                  <img src="../../Image/carbon_analytics.jpg" alt="" />
+                </div>
                   <h1>Analytics</h1>
                   <p>
                     Analytics to track the number of views, likes and comment
@@ -51,10 +53,9 @@ const About = () => {
                   </p>
                 </div>
                 <div className="card-2">
-                  <img
-                    src="../Image/fluent_people-community-32-filled.png"
-                    alt=""
-                  />
+                  <div className="img">
+                    <img src="" alt="" />
+                  </div>
                   <h1>Social interactions</h1>
                   <p>
                     Users on the platform can interact with posts they like,
@@ -62,7 +63,9 @@ const About = () => {
                   </p>
                 </div>
                 <div className="card-3">
+                <div className="img">
                   <img src="" alt="" />
+                </div>
                   <h1>Content creation</h1>
                   <p>
                     Write nice and appealing with our in-built markdown, a rich

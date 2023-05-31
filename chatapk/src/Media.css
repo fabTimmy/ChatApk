@@ -186,7 +186,7 @@
   }
   .sect-1-img {
     background: url(./Image/unsplash_87gLIFoj79c.png) no-repeat center;
-    background-size: contain !important;
+    background-size: cover !important;
     width: 23rem;
     height: 21rem;
     border-radius: 0.3rem;
@@ -260,27 +260,30 @@
     text-align: left;
   }
   .card-1 img {
-    background: url(./Image/carbon_analytics.png) no-repeat cover;
-    background-size: contain;
-    width: 3.5rem;
-    height: 3.5rem;
-    background-color: #d6d1f833;
     border-radius: 50%;
+    height: 3.5rem;
+    background: url(./Image/carbon_analytics.png) no-repeat center;
+    width: 3.5rem;
+    /* background-size: contain; */
+    background-color: #d6d1f833;
+  }
+  .img img{
+
   }
   .card-2 img {
     background: url(./Image/fluent_people-community-32-filled.png) no-repeat
-      cover;
-    background-size: contain;
+      center;
+    /* background-size: cover; */
     width: 3.5rem;
     background-color: #d6d1f833;
     border-radius: 50%;
     height: 3.5rem;
   }
   .card-3 img {
-    background-color: #d6d1f833;
+    background-color: #d6d1f833 !important;
     border-radius: 50%;
-    background: url(./Image/Frame\ 14.png) no-repeat cover;
-    background-size: contain;
+    background: url(./Image/Vector.png) no-repeat center;
+    /* background-size: cover; */
     width: 3.5rem;
     height: 3.5rem;
   }
@@ -311,13 +314,12 @@
     place-items: center;
   }
   .join-us-img {
-    background: url(./Image/austin-distel-rxpThOwuVgE-unsplash.jpg) no-repeat
-      cover;
-    background-size: contain;
+    background: url(./Image/unsplash_ZHvM3XIOHoE.jpg) no-repeat
+      center;
+    background-size: cover;
     width: 15rem;
     height: 15rem;
     border-radius: 50%;
-    border: var(--one-px) solid var(--Black);
   }
   .join-us-text {
     display: flex;
@@ -368,33 +370,30 @@
     gap: 2rem;
   }
   .share-img-1 {
-    background: url(./Image/unsplash_jzz_3jWMzHA.jpg) no-repeat cover;
-    background-size: contain;
+    background: url(./Image/unsplash_jzz_3jWMzHA.jpg) no-repeat center;
+    background-size: cover;
     width: 7rem;
     height: 7rem;
-    border: 1px solid var(--Black);
     border-radius: 50%;
     position: absolute;
     top: 0;
     right: 3rem;
   }
   .share-img-2 {
-    background: url(./Image/unsplash_jzz_3jWMzHA.jpg) no-repeat cover;
-    background-size: contain;
+    background: url(./Image/unsplash_fHXpgMd_XhE.png) no-repeat center;
+    background-size: cover;
     width: 7rem;
     height: 7rem;
-    border: 1px solid var(--Black);
     border-radius: 50%;
     position: absolute;
     top: 6rem;
     left: -1rem;
   }
   .share-img-3 {
-    background: url(./Image/unsplash_jzz_3jWMzHA.jpg) no-repeat cover;
-    background-size: contain;
+    background: url(./Image/unsplash_iEEBWgY_6lA.png) no-repeat center;
+    background-size: cover;
     width: 7rem;
     height: 7rem;
-    border: 1px solid var(--Black);
     border-radius: 50%;
     position: absolute;
     top: 12rem;
@@ -717,9 +716,9 @@
   .card-3 h1 {
     text-align: left;
   }
-  .card-1 img {
-    background: url(./Image/carbon_analytics.png) no-repeat cover;
-    background-size: contain;
+  .card-1 .img {
+    background: url(./Image/carbon_analytics.jpg) no-repeat center;
+    background-size: cover;
     width: 3.5rem;
     height: 3.5rem;
     background-color: #d6d1f833;
@@ -727,8 +726,8 @@
   }
   .card-2 img {
     background: url(./Image/fluent_people-community-32-filled.png) no-repeat
-      cover;
-    background-size: contain;
+      center;
+    background-size: cover;
     width: 3.5rem;
     background-color: #d6d1f833;
     border-radius: 50%;
@@ -737,8 +736,8 @@
   .card-3 img {
     background-color: #d6d1f833;
     border-radius: 50%;
-    background: url(./Image/Frame\ 14.png) no-repeat cover;
-    background-size: contain;
+    background: url(./Image/Vector.png) no-repeat center;
+    background-size: cover;
     width: 3.5rem;
     height: 3.5rem;
   }
@@ -763,13 +762,11 @@
     place-items: center;
   }
   .join-us-img {
-    background: url(./Image/unsplash_ZHvM3XIOHoE.jpg) no-repeat cover;
-    background-size: contain;
-    background-position: center;
+    background: url(./Image/unsplash_ZHvM3XIOHoE.jpg) no-repeat center;
+    background-size: cover;
     width: 15rem;
     height: 15rem;
     border-radius: 50%;
-    border: var(--one-px) solid var(--Black);
   }
   .join-us-text {
     display: flex;
@@ -977,8 +974,8 @@
     text-align: left;
   }
   .card-1 img {
-    background: url(./Image/carbon_analytics.png) no-repeat cover;
-    background-size: contain;
+    background: url(./Image/carbon_analytics.png) no-repeat center;
+    background-size: cover;
     width: 3.5rem;
     height: 3.5rem;
     background-color: #d6d1f833;
@@ -986,8 +983,8 @@
   }
   .card-2 img {
     background: url(./Image/fluent_people-community-32-filled.png) no-repeat
-      cover;
-    background-size: contain;
+      center;
+    background-size: cover;
     width: 3.5rem;
     background-color: #d6d1f833;
     border-radius: 50%;
@@ -996,8 +993,8 @@
   .card-3 img {
     background-color: #d6d1f833;
     border-radius: 50%;
-    background: url(./Image/unsplash_ZHvM3XIOHoE.jpg) no-repeat cover;
-    background-size: contain;
+    background: url(./Image/unsplash_ZHvM3XIOHoE.jpg) no-repeat center;
+    background-size: cover;
     width: 3.5rem;
     height: 3.5rem;
   }

@@ -75,9 +75,24 @@ section{
 }
 form{
   background-color: var(--White);
+  margin-top: -4.5rem;
 
-  /* padding: 0 2rem; */
-
+}
+.register-cont{
+  display: flex;
+  background-color: #ccc;
+  place-content: center;
+  width: 65%;
+  margin: 2rem 0;
+  height: 100vh !important;
+}
+.signup-img{
+  flex: 1;
+  min-height: 5rem !important;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(./Image/unsplash_9pjBx5uVBlg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .sign-in-cont{
   display: flex;
@@ -90,6 +105,7 @@ form{
   width: 29rem;
   line-height: 2.2rem;
   border-radius: 1rem;
+  flex: 1;
 }
 .sign-in-cont input{
   width: 100%;
@@ -214,6 +230,8 @@ form p{
 .p span{
   color: var(--Blue);
 }
+
+
 /* home-section */
 .home{
   text-decoration: none;
@@ -436,25 +454,3 @@ form p{
   transition: 1s ease-in-out all;
   border: 1px solid var(--btn-color);
 }
-/* .contact h2 {
-  margin-bottom: 3rem;
-}
-
-
-.contact form .inputBox {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-
-}
-
-
-.contact form .inputBox input {
-  width: 49%;
-}
-
-.contact form textarea {
-  resize: none;
-}
-
- */
