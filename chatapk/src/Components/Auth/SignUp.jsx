@@ -25,9 +25,31 @@ const SignUp = () => {
   };
   return (
     <section>
+      <div className="signup-img">
+        <img src="image.png" alt="" />
+      </div>
       <div className="sign-in-cont">
+
         <form onSubmit={handleSubmit}>
-          <h1>Create an account</h1>
+          <h1>Register as a Writer/Reader</h1>
+          <div className="names-cont">
+            <div>
+          <label htmlFor="First">First name</label>
+          <input
+            type="text"
+            placeholder="First name"
+            className="names"
+          />
+            </div>
+          <div>
+          <label htmlFor="LastName">Last name</label>
+          <input
+            type="text"
+            placeholder="Last name"
+            className="names"
+          />
+          </div>
+          </div>
           <input
             type="email"
             placeholder="Email"

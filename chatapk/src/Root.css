@@ -1,0 +1,14 @@
+:root{
+    --btn-color: #543EE0;
+    /* neutral */
+    --White: hsl(0, 0%, 100%);
+    --Black: #000;
+    --Light-brown: #c5c6c7;
+    --one-px: 0.0625rem;
+    --font-family: 'DM Sans', sans-serif;
+    --cream-bg: rgba(255, 237, 204, 0.5);
+    --text-bg: #626262;
+    --border-color: #D0D0D0;
+    --join-us-bg: #FFEDCC80;
+    --foot-links: #111111;
+}
