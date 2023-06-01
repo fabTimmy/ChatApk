@@ -2,6 +2,7 @@ import './App.css';
 import './Root.css';
 import './Media.css';
 import './Menu.css';
+import './Auth.css';
 import Pages from './Components/Pages';
 
 

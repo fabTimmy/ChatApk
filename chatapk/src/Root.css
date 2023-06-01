@@ -1,5 +1,6 @@
 :root{
     --btn-color: #543EE0;
+    --Fb-bg: #077ef5;
     /* neutral */
     --White: hsl(0, 0%, 100%);
     --Black: #000;
@@ -8,7 +9,9 @@
     --font-family: 'DM Sans', sans-serif;
     --cream-bg: rgba(255, 237, 204, 0.5);
     --text-bg: #626262;
+    --text-bg-1: #b4b4b43f;
     --border-color: #D0D0D0;
     --join-us-bg: #FFEDCC80;
     --foot-links: #111111;
+    --s-border-color: #D9D9D9;
 }

@@ -58,6 +58,10 @@ const SignIn = () => {
   }
   return (
     <div className="sign-in-cont">
+      <div className="auth-router">
+              <NavLink to='/signup' className='nav-route' >REGISTER</NavLink>
+              <NavLink to='/signin' className='nav-route nav-r-1' >LOGIN</NavLink>
+          </div>
       <form onSubmit={handleSubmit}>
         <h1>Welcome!</h1>
         <p className="p">Sign in to continue Billie<span>Chats</span></p>
