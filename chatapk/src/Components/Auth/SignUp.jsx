@@ -5,12 +5,20 @@ import { FcGoogle } from "react-icons/fc";
 import { AiFillFacebook } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { AiOutlineEye } from "react-icons/ai";
+import { AiOutlineEyeInvisible } from "react-icons/ai";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
+  const [isError, setIsError] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [visible, setVisible] = useState("");
+  const [isVisible, setIsVisible] = useState("");
 
   const navigate = useNavigate();
+  const inputType = visible ? "text" : "password";
+  const inputTypes = isVisible ? "text" : "password";
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -23,6 +31,15 @@ const SignUp = () => {
         console.log(error);
       });
   };
+  const validateCheck = (e) => {
+    setConfirmPassword(e.target.value);
+    if (password !== confirmPassword) {
+      setIsError("Confirm Password does not match with password");
+    } else {
+      setIsError("");
+    }
+  };
+
   return (
     <section>
       <div className="register-cont">
@@ -37,11 +54,16 @@ const SignUp = () => {
         </div>
         <div className="sign-in-cont">
           <div className="auth-router">
-              <NavLink to='/signup' className='nav-route' >REGISTER</NavLink>
-              <NavLink to='/signin' className='nav-route nav-r-1' >LOGIN</NavLink>
+            <NavLink to="/signup" className="nav-route">
+              REGISTER
+            </NavLink>
+            <NavLink to="/signin" className="nav-route nav-r-1">
+              LOGIN
+            </NavLink>
           </div>
           <form onSubmit={handleSubmit}>
             <h1>Register as a Writer/Reader</h1>
+            
             <div className="names-cont">
               <div>
                 <label htmlFor="First">First name</label>
@@ -69,19 +91,41 @@ const SignUp = () => {
                 onChange={(e) => setEmail(e.target.value)}
               />
               <label htmlFor="pwd">Password</label>
-              <input
-                type="password"
-                placeholder="Create Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
+              <div className="pwd-cont">
+                <input
+                  placeholder="Create Password"
+                  value={password}
+                  type={inputType}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+                <div className="eyes" onClick={() => setVisible(!visible)}>
+                  {visible ? (
+                    <AiOutlineEye className="eye-icon" />
+                  ) : (
+                    <AiOutlineEyeInvisible className="eye-icon" />
+                  )}
+                </div>
+              </div>
               <label htmlFor="confirm-pwd">Confirm password</label>
-              <input
-                type="password"
-                placeholder="Confirm Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
+              <div className="pwd-cont">
+                <input
+                  type={inputTypes}
+                  placeholder="Confirm Password"
+                  value={confirmPassword}
+                  name="confirmpass"
+                  onChange={(e) => validateCheck(e)}
+                />
+                <div className="eyes" onClick={() => setIsVisible(!isVisible)}>
+                  {isVisible ? (
+                    <AiOutlineEye className="eye-icon" />
+                  ) : (
+                    <AiOutlineEyeInvisible className="eye-icon" />
+                  )}
+                </div>
+                <div className="isError">
+              {isError}
+            </div>
+              </div>
             </div>
             <br />
             <button type="submit" className="btn">

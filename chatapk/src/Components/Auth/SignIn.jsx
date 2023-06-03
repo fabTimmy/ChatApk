@@ -1,17 +1,18 @@
 import { useState } from "react";
-import { auth, provider } from "../../Firebase";
-import { signInWithEmailAndPassword, sendPasswordResetEmail } from "firebase/auth";
+import { auth } from "../../Firebase";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { NavLink, useNavigate } from "react-router-dom";
-import { FcGoogle } from "react-icons/fc";
-import { AiFillFacebook } from "react-icons/ai";
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { AiOutlineEye } from 'react-icons/ai';
+import { AiOutlineEyeInvisible } from 'react-icons/ai';
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [visible, setVisible] = useState('')
   const [errors] = useState('');
 
   const navigate = useNavigate();
+  const inputType = visible ? 'text' : 'password';
 
   // sign in with email and password
   const handleSubmit = (e) => {
@@ -19,94 +20,68 @@ const SignIn = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log(userCredential);
-        navigate('/dashboard')
+        navigate('/blogs')
       })
       .catch((error) => {
         console.log(error);
       });
   };
-  // sign in with google
-  const googleProvider = new GoogleAuthProvider();
-  const GoogleLogin = async () => {
-    try {
-      const result = await signInWithPopup(auth, googleProvider)
-      console.log(result.user);
-      navigate('/dashboard')
-    } catch (error) {
-      console.log(error)
-    }
-  }
-  // sign in with facebook
-  const FacebookLogin = async () => {
-    try {
-      const result = await signInWithPopup(auth, provider)
-      console.log(result)
-      navigate('/dashboard')
-    } catch (error) {
-      console.log(error)
-    }
-  } 
-  // reset password
-  const resetPassword = () => {
-    sendPasswordResetEmail(auth, email)
-      .then(() => {
-        alert("Check your email for password reset link");
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }
   return (
-    <div className="sign-in-cont">
+    <section>
+      <div className="register-cont">
+        <div className="signup-img">
+          <div className="signup-img-text">
+          <h1>CHATTER</h1>
+            <p>
+              Unleash the Power of Words, Connect with Like-minded Readers and
+              Writers
+            </p>
+          </div>
+        </div>
+
+    <div className="sign-up-cont-2">
       <div className="auth-router">
               <NavLink to='/signup' className='nav-route' >REGISTER</NavLink>
               <NavLink to='/signin' className='nav-route nav-r-1' >LOGIN</NavLink>
           </div>
       <form onSubmit={handleSubmit}>
-        <h1>Welcome!</h1>
-        <p className="p">Sign in to continue Billie<span>Chats</span></p>
+        <h1>Welcome back</h1>
+        <div className="names-cont-2">
+        <label htmlFor="email">Email address</label>
         <input
           type="email"
           placeholder="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
+          className="email"
         />
         {errors.email && <p style={{color: 'red', fontSize: '13px', margin: '1px'}}>{errors.email}</p>}
+        <label htmlFor="pwd">Password</label>
+        <div className="pwd-cont">
         <input
-          type="password"
           placeholder="password"
+          type={inputType}
+          id="pwd"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
-        />
+          fullWidth
+          />
+        <div className="eyes" onClick={() => setVisible(!visible)}>
+          {visible ? <AiOutlineEye className="eye-icon"/> : <AiOutlineEyeInvisible className="eye-icon"/>}
+        </div>
+        </div>
         {errors.password && <p style={{color: 'red', fontSize: '13px', margin: '1px'}}>{errors.password}</p>}
-        <div className="remember-cont">
-        <p>
-          <input type="checkbox" className="checkbox" /> <p className="rem">Remember me</p>
-        </p>
         </div>
+        
         <button onClick={handleSubmit} type="submit" className="btn">
-          Sign in
+          Log in
         </button>
-        <NavLink onClick={resetPassword} className='forget-pass' to='/forget-pass'>Forget password?</NavLink>
-        <h5 className="or-cont">OR continue with</h5>
       </form>
-      <div className="socials">
-        <button onClick={GoogleLogin}>
-          <FcGoogle className="nav-icon" />
-          Sign in with Google
-        </button>
-        <button onClick={FacebookLogin}>
-          <AiFillFacebook className="fb" />
-          Sign in with Facebook
-        </button>
-        <div className="create-acc">
-        Don't have an account?
-        <NavLink className='create-ac' to="/signup">Register</NavLink>
-        </div>
-      </div>
     </div>
+      </div>
+    </section>
   );
 };
 

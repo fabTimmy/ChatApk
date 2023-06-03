@@ -1,4 +1,6 @@
 @media (max-width: 819px) {
+  header{
+  }
   .ham-menu,
   .ham-close {
     color: var(--Black);
@@ -61,10 +63,11 @@
     cursor: pointer;
     font-weight: 600;
   }
-
+  
   .menu-icon{
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px solid #667788 !important;
     align-items: center;
     padding: 0 1rem;
     background-color: var(--White);

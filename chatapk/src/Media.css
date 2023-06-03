@@ -264,16 +264,13 @@
     height: 3.5rem;
     background: url(./Image/carbon_analytics.png) no-repeat center;
     width: 3.5rem;
-    /* background-size: contain; */
+    background-size: contain;
     background-color: #d6d1f833;
-  }
-  .img img{
-
   }
   .card-2 img {
     background: url(./Image/fluent_people-community-32-filled.png) no-repeat
       center;
-    /* background-size: cover; */
+    /* background-size: contain; */
     width: 3.5rem;
     background-color: #d6d1f833;
     border-radius: 50%;
@@ -975,7 +972,7 @@
   }
   .card-1 img {
     background: url(./Image/carbon_analytics.png) no-repeat center;
-    background-size: cover;
+    background-size: contain;
     width: 3.5rem;
     height: 3.5rem;
     background-color: #d6d1f833;
